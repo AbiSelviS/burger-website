@@ -13,13 +13,18 @@
   }
 
   /* NAVBAR */
-  .nav {
+  /* .nav {
       display: flex;
       justify-content: space-evenly;
       background-color: black;
       color: white;
       padding: 10px;
-  }
+  } */
+   .nav{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
 
   .js {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -27,10 +32,15 @@
       font-style: italic;
   }
 
-  ul {
+  /* ul {
       display: flex;
       gap: 30px;
-  }
+  } */
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+}
 
   li {
       list-style: none;
@@ -50,6 +60,55 @@
   .img1{
    margin:10px;
   }
+  .logo
+  {
+    font-size: 30px;
+  }
+
+   .icons{
+    display:flex;
+    align-items:center;
+    gap:20px;   /* 👈 this creates space between icons */
+    font-size:20px;
+}
+
+.icons i{
+    cursor:pointer;
+}
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 20px; */
+    align-items: center;
+    padding: 15px 40px;
+    background: black;
+    color: white;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Menu items */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Burger icon */
+.menu-icon {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
 
   /* HERO SECTION */
   .bckground {
@@ -142,9 +201,10 @@
 
   .img7 {
       width: 100%;
+      /* height:600px; */
   }
   .img9{
-    height: auto;
+    height: 800px;
   }
 
   /* text section */
@@ -610,9 +670,19 @@ margin-left: 30%;
       font-size: 25px;
   }
 
-  .bc {
+  .icon1 {
       font-size: 20px;
-      margin-left: 12px;
+      margin-left: 17px;
+    
+  }
+  .icon2 {
+      font-size: 20px;
+      margin-left: 17px;
+    
+  }
+  .loc {
+      font-size: 20px;
+      margin-left: 17px;
     
   }
   .ol
@@ -668,19 +738,59 @@ margin-left: 30%;
 
       /* NAVBAR */
       .nav {
-          flex-direction: column;
+          flex-direction:row;
           gap: 10px;
           text-align: center;
       }
 
-      ul {
-          flex-direction: column;
-          gap: 15px;
-      }
+      .nav-links {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: black;
+    text-align: center;
+    padding: 20px 0;
+}  
+
+.icons{
+    display:flex;
+    align-items:center;
+    gap:10px;   /* 👈 this creates space between icons */
+    font-size:12px;
+    /* margin-left: 20px; */
+}
+
+#menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
 
       .js {
           font-size: 24px;
       }
+
+
+       .menu-icon{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        background:black;
+        text-align:center;
+        padding:20px 0;
+    }
+
+    #menu-toggle:checked ~ .nav-links{
+        display:flex;
+    }
 
        /* /* HERO SECTION */
        .bckground {
@@ -895,7 +1005,8 @@ margin-left: 30%;
     }
 
   .logo {
-    font-size:15px;
+    font-size:24px;
+    font-style: italic;
     justify-content: center;
   }
   .topic{
@@ -961,8 +1072,36 @@ margin-left: 30%;
 
   .js {
     font-size: 26px;
+  }  
+  .logo
+  {
+    font-size: 25px;
+    font-style:italic ;
   }
 
+   .menu-icon{
+        display:block;
+        color:white;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        background:black;
+        width:250px;
+        flex-direction:column;
+        align-items:center;
+        padding:20px 0;
+        display:none;
+    }
+
+    /* When click toggle */
+    #menu-toggle:checked ~ .nav-links{
+        display:flex;
+    }
+
+    
   /* HERO SECTION */
   .bckground {
     height: 550px;
